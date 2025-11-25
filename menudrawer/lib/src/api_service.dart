@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'vehiculo_model.dart';
 
 class ApiService {
-  static const String baseUrl = "http://192.168.1.2:3000";
+  static const String baseUrl = "http://172.16.24.53:3000";
 
   // ===== Vehículos =====
   static Future<List<Vehiculo>> obtenerVehiculos() async {
@@ -61,7 +61,7 @@ class ApiService {
     return res.statusCode == 200;
   }
 
-  // ===== Actualizar Vehículo (NUEVO) =====
+  // ===== Actualizar Vehículo =====
   static Future<bool> actualizarVehiculo({
     required String placa,
     required int kilometraje,

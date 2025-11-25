@@ -3,7 +3,7 @@ import 'package:menudrawer/src/inicio.dart';
 import 'package:menudrawer/src/notificacion.dart';
 import 'package:menudrawer/src/perfil.dart';
 import 'package:menudrawer/src/siguiente.dart';
-import 'package:menudrawer/src/login_page.dart'; // ✅ Nombre correcto
+import 'package:menudrawer/src/login_page.dart'; 
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -11,7 +11,7 @@ class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: const Color(0xFF000000), // Fondo negro
+      backgroundColor: const Color(0xFF000000), 
       child: Column(
         children: [
           // 🔹 Encabezado
@@ -87,7 +87,7 @@ class Navbar extends StatelessWidget {
           // 🔻 Separador
           const Divider(color: Colors.white54),
 
-          // 🔴 BOTÓN CERRAR SESIÓN (VISIBLE Y FUNCIONAL)
+          // 🔴 BOTÓN CERRAR SESIÓN
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
             child: SizedBox(
@@ -104,14 +104,14 @@ class Navbar extends StatelessWidget {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red, // 🔴 Botón rojo
+                  backgroundColor: Colors.red, 
                   padding: const EdgeInsets.symmetric(vertical: 14),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
                 onPressed: () {
-                  // Navega a la pantalla de login y limpia el stack
+                  
                   Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(builder: (context) => const LoginPage()),
@@ -126,7 +126,7 @@ class Navbar extends StatelessWidget {
     );
   }
 
-  // 🔸 Método para crear cada opción del Drawer
+  
   ListTile _buildDrawerItem({
     required IconData icon,
     required String text,

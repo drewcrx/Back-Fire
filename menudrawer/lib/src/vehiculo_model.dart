@@ -37,11 +37,11 @@ class Vehiculo {
   final String modelo;
   final String placa;
 
-  // 🔥 Campos que faltaban
+  
   int kilometraje;
   DateTime ultimaVisita;
 
-  // Solo para uso local en app (historial)
+  
   List<Arreglo> arreglos;
 
   Vehiculo({

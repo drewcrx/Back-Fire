@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'src/inicio.dart';
 import 'src/perfil.dart';
-import 'src/notificacion.dart';
 import 'src/vehiculos.dart';
 import 'src/editar_perfil.dart';
 import 'src/agregar_vehiculo.dart';
@@ -59,7 +58,6 @@ class MyApp extends StatelessWidget {
         '/register': (context) => const RegisterPage(),
         '/inicio': (context) => const InicioPage(),
         '/perfil': (context) => const PerfilPage(),
-        '/notificacion': (context) => const NotificacionPage(),
         '/editarperfil': (context) => const EditarPerfilPage(),
         '/vehiculos': (context) => VehiculosPage(),
         '/agregar_vehiculo': (context) => const AgregarVehiculoPage(),

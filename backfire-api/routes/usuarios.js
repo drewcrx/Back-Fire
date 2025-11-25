@@ -35,7 +35,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Login (correo o usuario + contraseña)
+// Login 
 router.post("/login", async (req, res) => {
   const { usuario, correo, password } = req.body || {};
   const identidad = usuario || correo;
@@ -52,7 +52,7 @@ router.post("/login", async (req, res) => {
     const ok = await bcrypt.compare(password, u.password_hash);
     if (!ok) return res.status(401).json({ error: "Credenciales inválidas" });
 
-    // Si quieres, emite token JWT aquí
+    
     return res.status(200).json({
       mensaje: "Login exitoso",
       usuario: { id: u.id, nombre: u.nombre, correo: u.correo, usuario: u.usuario }

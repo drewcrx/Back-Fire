@@ -22,7 +22,7 @@ class _ScanQRPageState extends State<ScanQRPage>
   void initState() {
     super.initState();
 
-    // ✅ Animación de la línea que baja
+    
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
@@ -56,7 +56,7 @@ class _ScanQRPageState extends State<ScanQRPage>
       ),
       body: Stack(
         children: [
-          // ✅ Lector QR
+          //  Lector QR
           MobileScanner(
             controller: MobileScannerController(
               detectionSpeed: DetectionSpeed.noDuplicates,
@@ -68,7 +68,7 @@ class _ScanQRPageState extends State<ScanQRPage>
 
               final rawValue = capture.barcodes.first.rawValue;
 
-              // ✅ Validación del QR
+              //  Validación del QR
               if (rawValue == null || rawValue.trim().isEmpty) {
                 setState(() => _processing = false);
                 return;
@@ -76,7 +76,7 @@ class _ScanQRPageState extends State<ScanQRPage>
 
               final codigoLeido = rawValue.trim();
 
-              // ✅ Buscar en API por placa/código del QR
+              //  Buscar en API por placa/código del QR
               Vehiculo? vehiculo = await ApiService.buscarPorPlaca(codigoLeido);
 
               if (vehiculo == null) {
@@ -85,7 +85,7 @@ class _ScanQRPageState extends State<ScanQRPage>
                 return;
               }
 
-              // ✅ Ir al detalle
+              //  Ir al detalle
               await Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -97,7 +97,7 @@ class _ScanQRPageState extends State<ScanQRPage>
             },
           ),
 
-          // ✅ Marco del escáner con animación
+          //  Marco del escáner con animación
           Center(
             child: Stack(
               children: [
@@ -117,7 +117,7 @@ class _ScanQRPageState extends State<ScanQRPage>
                   ),
                 ),
 
-                // ✅ Línea animada tipo escáner
+                //  Línea animada tipo escáner
                 AnimatedBuilder(
                   animation: _animation,
                   builder: (_, child) {
@@ -143,7 +143,7 @@ class _ScanQRPageState extends State<ScanQRPage>
             ),
           ),
 
-          // ✅ Etiqueta "Escaneando..."
+          //  Etiqueta "Escaneando..."
           Positioned(
             bottom: 50,
             left: 0,
@@ -167,7 +167,7 @@ class _ScanQRPageState extends State<ScanQRPage>
     );
   }
 
-  // ✅ Alerta cuando no se encuentra el vehículo
+  //  Alerta cuando no se encuentra el vehículo
   void _mostrarNoEncontrado(BuildContext context, String codigo) {
     showDialog(
       context: context,

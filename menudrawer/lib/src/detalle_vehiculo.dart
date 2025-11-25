@@ -153,7 +153,7 @@ class _DetalleVehiculoPageState extends State<DetalleVehiculoPage> {
   }
 
   // ---------------------------------------------------------
-  //  ACTUALIZAR VEHÍCULO (modal completo)
+  //  ACTUALIZAR VEHÍCULO
   // ---------------------------------------------------------
   void _actualizarVehiculo() {
     final kmController = TextEditingController(

@@ -7,27 +7,10 @@ class PerfilPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String nombre = "Juan Pérez";
-    final String email = "juan.perez@email.com";
+    final String nombre = "Andrew Carrera";
+    final String email = "abv.carrera@yavirac.edu.ec";
 
-    final List<Vehiculo> vehiculosCliente = [
-      Vehiculo(
-        marca: 'Toyota',
-        modelo: 'Hilux',
-        placa: 'ABC-123',
-        kilometraje: 0,
-        ultimaVisita: DateTime.now(),
-        arreglos: [],
-      ),
-      Vehiculo(
-        marca: 'Chevrolet',
-        modelo: 'Spark GT',
-        placa: 'XYZ-789',
-        kilometraje: 0,
-        ultimaVisita: DateTime.now(),
-        arreglos: [],
-      ),
-    ];
+    
 
     return Scaffold(
       appBar: AppBar(
@@ -86,56 +69,9 @@ class PerfilPage extends StatelessWidget {
             ),
 
             const SizedBox(height: 20),
-            const Text(
-              'Vehículos',
-              style: TextStyle(
-                fontFamily: 'BBH_Sans_Bogle',
-                fontSize: 18,
-                color: Colors.green,
-              ),
-            ),
 
-            Expanded(
-              child: ListView.builder(
-                itemCount: vehiculosCliente.length,
-                itemBuilder: (context, index) {
-                  final vehiculo = vehiculosCliente[index];
-                  return Card(
-                    color: Colors.green.withOpacity(0.1),
-                    margin: const EdgeInsets.symmetric(vertical: 6),
-                    child: ListTile(
-                      leading: const Icon(Icons.directions_car, color: Colors.green),
-                      title: Text(
-                        '${vehiculo.marca} ${vehiculo.modelo}',
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'BBH_Sans_Bogle',
-                        ),
-                      ),
-                      subtitle: Text(
-                        'Placa: ${vehiculo.placa}',
-                        style: const TextStyle(
-                          color: Colors.white70,
-                          fontFamily: 'BBH_Sans_Bogle',
-                        ),
-                      ),
-                      trailing: const Icon(Icons.arrow_forward_ios,
-                          color: Colors.green, size: 16),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => DetalleVehiculoPage(vehiculo: vehiculo),
-                          ),
-                        );
-                      },
-                    ),
-                  );
-                },
-              ),
-            ),
+            const Spacer(), 
 
-            const SizedBox(height: 20),
             Center(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(

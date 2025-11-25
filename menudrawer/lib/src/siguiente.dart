@@ -6,9 +6,9 @@ class SiguientePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF000000), // Fondo negro
+      backgroundColor: const Color(0xFF000000), 
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B), // Verde principal
+        backgroundColor: const Color(0xFF00A86B), 
         title: const Text(
           'Pantalla Final',
           style: TextStyle(

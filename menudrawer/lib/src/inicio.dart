@@ -48,7 +48,6 @@ class InicioPage extends StatelessWidget {
             _DrawerItem(icon: Icons.home, text: 'Inicio', route: '/inicio'),
             _DrawerItem(icon: Icons.car_repair, text: 'Vehículos', route: '/vehiculos'),
             _DrawerItem(icon: Icons.person, text: 'Perfil', route: '/perfil'),
-            _DrawerItem(icon: Icons.notifications, text: 'Notificación', route: '/notificacion'),
             _DrawerItem(icon: Icons.build, text: 'Servicios', route: '/servicios'),
             const Divider(color: Colors.white54),
             ListTile(

@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
           Image.asset('assets/images/2.png', height: 300),
           const SizedBox(height: 30),
 
-          // Correo (puedes aceptar también usuario si prefieres)
+          // Correo
           TextFormField(
             controller: _emailController,
             style: const TextStyle(
